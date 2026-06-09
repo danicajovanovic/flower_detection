@@ -1,0 +1,8 @@
+colors:
+- [208, 2, 27]
+- [255, 255, 255]
+- [255, 3, 214]
+names: [rose, daisy, tulip]
+nc: 3
+train: ../377530_flower-detection/images/train
+val: ../377530_flower-detection/images/val

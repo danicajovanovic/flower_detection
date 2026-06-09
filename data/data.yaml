@@ -1,0 +1,10 @@
+path: /content/drive/MyDrive/flower_detection/data
+
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: rose
+  1: daisy
+  2: tulip
