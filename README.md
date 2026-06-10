@@ -13,11 +13,15 @@ Ovaj projekat predstavlja implementaciju sistema za detekciju i klasifikaciju cv
 * Treniranje modela na sopstveno pripremljenom i anotiranom skupu podataka.
 * Evaluacija modela korišćenjem metrika Precision, Recall i mAP.
 * Vizuelni prikaz rezultata detekcije na novim slikama.
+* Jednostavan korisnički interfejs razvijen u Streamlit okruženju.
 
 ## Struktura projekta
 
 ```text
 flower_detection/
+│
+├── app/
+│   └── ui.py
 │
 ├── data/
 │   ├── train/
@@ -35,6 +39,7 @@ flower_detection/
 ├── models/
 ├── results/
 ├── runs/
+├── dokumentacija.md
 └── README.md
 ```
 
@@ -46,6 +51,7 @@ flower_detection/
 4. Treniranje YOLOv8 modela.
 5. Evaluacija performansi modela.
 6. Testiranje modela na novim slikama i analiza dobijenih rezultata.
+7. Razvoj Streamlit korisničkog interfejsa za jednostavno korišćenje modela.
 
 ## Pokretanje projekta
 
@@ -67,9 +73,17 @@ python src/evaluate.py
 python src/predict.py
 ```
 
+### Pokretanje Streamlit aplikacije
+
+```bash
+streamlit run app/ui.py
+```
+
 ## Napomena
 
 Dataset korišćen u ovom projektu pripremljen je i anotiran posebno za potrebe detekcije cvetova. Tokom razvoja modela izvršena je optimizacija skupa podataka kroz dopunu klasa i ponovno treniranje modela radi postizanja boljih performansi.
+
+Detaljniji opis arhitekture modela, pripreme podataka, procesa treniranja i evaluacije nalazi se u fajlu **dokumentacija.md**.
 
 ## Autor
 
