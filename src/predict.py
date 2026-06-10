@@ -9,7 +9,7 @@ def main():
 
     model.predict(
         source=SOURCE_PATH,
-        conf=0.25,
+        conf=0.5,
         save=True,
         project="results",
         name="prediction"
