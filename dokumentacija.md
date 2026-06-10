@@ -170,6 +170,34 @@ Ova metrika daje realniju sliku ukupnih performansi sistema.
 
 ---
 
+# Korisnički interfejs
+
+Pored implementacije i evaluacije modela, u okviru projekta razvijena je i jednostavna aplikacija korišćenjem biblioteke **Streamlit**.
+
+Cilj korisničkog interfejsa je da omogući jednostavno korišćenje istreniranog modela bez potrebe za ručnim pokretanjem Python skripti i unosom komandi.
+
+Aplikacija omogućava:
+
+* učitavanje slike sa lokalnog računara,
+* podešavanje praga pouzdanosti detekcije (confidence threshold),
+* automatsko pokretanje YOLOv8 modela,
+* prikaz detektovanih objekata sa bounding box-ovima,
+* prikaz prepoznate klase i verovatnoće detekcije.
+
+Interfejs koristi prethodno istrenirani model sačuvan u fajlu **best.pt**, koji se učitava prilikom pokretanja aplikacije.
+
+Na ovaj način omogućena je jednostavna demonstracija rada sistema i testiranje modela na novim slikama bez dodatnih izmena izvornog koda.
+
+Za pokretanje aplikacije koristi se komanda:
+
+```bash
+streamlit run app/ui.py
+```
+
+Implementacijom ovog dela projekta razvijen je kompletan sistem koji obuhvata pripremu podataka, treniranje modela, evaluaciju i praktičnu primenu kroz grafički korisnički interfejs.
+
+---
+
 # Analiza izazova i poteškoća
 
 Tokom razvoja projekta identifikovano je više izazova koji su uticali na performanse sistema.
@@ -205,6 +233,8 @@ Najveći broj grešaka javljao se u slučajevima:
 Razvijeni sistem uspešno demonstrira mogućnost automatske detekcije i klasifikacije cvetova primenom savremenih metoda dubokog učenja.
 
 Rezultati projekta pokazuju da pravilna priprema i balansiranje dataseta imaju značajan uticaj na performanse modela. Primenom YOLOv8 arhitekture ostvarena je efikasna detekcija objekata uz relativno malu računarsku zahtevnost.
+
+Dodatno, implementacijom Streamlit korisničkog interfejsa omogućena je jednostavna i interaktivna upotreba modela, što projekat čini pogodnim za demonstraciju i dalji razvoj.
 
 Ovako realizovan sistem predstavlja dobru osnovu za dalja unapređenja, kao što su proširenje broja klasa, povećanje skupa podataka i dodatna optimizacija hiperparametara radi poboljšanja tačnosti modela.
 
