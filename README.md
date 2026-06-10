@@ -14,16 +14,6 @@ Ovaj projekat predstavlja implementaciju sistema za detekciju i klasifikaciju cv
 * Evaluacija modela korišćenjem metrika Precision, Recall i mAP.
 * Vizuelni prikaz rezultata detekcije na novim slikama.
 
-## Korišćene tehnologije
-
-* Python
-* YOLOv8 (Ultralytics)
-* PyTorch
-* Supervisely
-* Google Colab
-* Visual Studio Code
-* Git i GitHub
-
 ## Struktura projekta
 
 ```text
@@ -83,4 +73,4 @@ Dataset korišćen u ovom projektu pripremljen je i anotiran posebno za potrebe 
 
 ## Autor
 
-Danica Jovanović
+Danica Jovanović, Uroš Popović
