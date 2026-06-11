@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+
+# VS Code
+.vscode/
+
+# uv cache
+.dist/
+
+# Generated training files
+runs/
+
+# Temporary folders
+inputs/
+
+# Operating system files
+.DS_Store
+Thumbs.db
