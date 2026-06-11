@@ -1,6 +1,8 @@
 # Flower Detection using YOLOv8
 
-Ovaj projekat predstavlja implementaciju sistema za automatsku detekciju i klasifikaciju cvetova primenom modela **YOLOv8**. Cilj projekta je razvoj modela koji može da prepozna i lokalizuje različite vrste cvetova na fotografijama, kao i analiza njegovih performansi korišćenjem standardnih evaluacionih metrika.
+Ovaj projekat predstavlja implementaciju sistema za automatsku detekciju i klasifikaciju cvetova primenom modela **YOLOv8**. Cilj projekta je razvoj modela koji može da prepozna i lokalizuje različite vrste cvetova na fotografijama, uz analizu njegovih performansi korišćenjem standardnih evaluacionih metrika.
+
+---
 
 ## Funkcionalnosti
 
@@ -11,10 +13,10 @@ Ovaj projekat predstavlja implementaciju sistema za automatsku detekciju i klasi
   * Daisy
   * Tulip
 * Treniranje modela na sopstveno pripremljenom i anotiranom skupu podataka.
-* Evaluacija modela korišćenjem metrika Precision, Recall i mAP.
+* Evaluacija modela korišćenjem metrika **Precision**, **Recall** i **mAP**.
 * Vizuelni prikaz rezultata detekcije na novim slikama.
-* Jednostavan korisnički interfejs razvijen u Streamlit okruženju.
-* Upravljanje Python okruženjem i zavisnostima korišćenjem `uv` alata.
+* Jednostavan korisnički interfejs razvijen u **Streamlit** okruženju.
+* Upravljanje Python okruženjem i zavisnostima korišćenjem **uv** alata.
 
 ---
 
@@ -27,15 +29,38 @@ flower_detection/
 │   └── ui.py
 │
 ├── data/
+│   ├── all/
+│   │   ├── images/
+│   │   └── labels/
+│   │
 │   ├── train/
+│   │   ├── images/
+│   │   └── labels/
+│   │
 │   ├── valid/
+│   │   ├── images/
+│   │   └── labels/
+│   │
 │   ├── test/
+│   │   ├── images/
+│   │   └── labels/
+│   │
 │   ├── data_colab.yaml
 │   ├── data_local.yaml
 │   └── data_config.yaml
 │
+├── inputs/
+│   └── test.jpg
+│
 ├── models/
 │   └── best.pt
+│
+├── results/
+│   ├── BoxF1_curve.png
+│   ├── BoxPR_curve.png
+│   ├── confusion_matrix.png
+│   ├── labels.jpg
+│   └── results.png
 │
 ├── src/
 │   ├── split_dataset.py
@@ -47,6 +72,7 @@ flower_detection/
 ├── README.md
 ├── .gitignore
 ├── .python-version
+├── main.py
 ├── pyproject.toml
 └── uv.lock
 ```
@@ -98,11 +124,33 @@ streamlit run app/ui.py
 
 Projekat koristi **uv** za upravljanje Python okruženjem i zavisnostima.
 
-Za kreiranje okruženja i instalaciju potrebnih biblioteka dovoljno je pokrenuti:
+Za kreiranje okruženja i instalaciju svih potrebnih biblioteka dovoljno je pokrenuti:
 
 ```bash
 uv sync
 ```
+
+Aktivacija virtuelnog okruženja:
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+---
+
+## Rezultati
+
+U folderu **results/** nalaze se grafički prikazi dobijeni tokom treniranja i evaluacije modela:
+
+* PR kriva (Precision-Recall)
+* F1 kriva
+* Konfuziona matrica
+* Prikaz distribucije anotacija
+* Grafici procesa treniranja
+
+Ovi rezultati omogućavaju detaljnu analizu performansi modela i poređenje različitih eksperimenata.
 
 ---
 
@@ -116,7 +164,7 @@ Detaljniji opis arhitekture modela, pripreme podataka, procesa treniranja i eval
 
 ## Autori
 
-Danica Jovanović
-Uroš Popović
+**Danica Jovanović**
+**Uroš Popović**
 
 Fakultet tehničkih nauka, Novi Sad
