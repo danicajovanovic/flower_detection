@@ -49,26 +49,32 @@ flower_detection/
 │   ├── data_local.yaml
 │   └── data_config.yaml
 │
-├── inputs/
-│   └── test.jpg
-│
 ├── models/
 │   └── best.pt
-│
-├── results/
+|
+├── src/
+│   ├── split_dataset.py
+│   ├── train_colab.py
+│   ├── evaluate.py
+│   └── predict.py
+|
+├── training_progress/
+│   ├── epoch_1/
+│   ├── epoch_5/
+│   ├── epoch_10/
+│   ├── epoch_50/
+│   ├── epoch_100/
+│   ├── epoch_150/
+│   └── epoch_200/
+│   
+├── training_results/
 │   ├── BoxF1_curve.png
 │   ├── BoxPR_curve.png
 │   ├── confusion_matrix.png
 │   ├── labels.jpg
 │   └── results.png
 │
-├── src/
-│   ├── split_dataset.py
-│   ├── train_colab.py
-│   ├── evaluate.py
-│   └── predict.py
-│
-├── dokumentacija.md
+├── dokumentacija.docx
 ├── README.md
 ├── .gitignore
 ├── .python-version
@@ -142,7 +148,7 @@ Aktivacija virtuelnog okruženja:
 
 ## Rezultati
 
-U folderu **results/** nalaze se grafički prikazi dobijeni tokom treniranja i evaluacije modela:
+U folderu **training_results/** nalaze se grafički prikazi dobijeni tokom treniranja modela:
 
 * PR kriva (Precision-Recall)
 * F1 kriva

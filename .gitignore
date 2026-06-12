@@ -11,8 +11,8 @@ __pycache__/
 # uv cache
 .dist/
 
-# Generated training files
-runs/
+# Progress
+progress/
 
 # Temporary folders
 inputs/

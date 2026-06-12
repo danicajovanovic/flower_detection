@@ -14,7 +14,7 @@ WEIGHTS_DIR = (
 PROGRESS_IMAGES = BASE_DIR / "progress"
 OUTPUT_DIR = BASE_DIR / "results" / "training_progress"
 
-EPOCHS_TO_SHOW = [1, 5, 10, 50, 100, 150, 196, 200, 239]
+EPOCHS_TO_SHOW = [1, 5, 10, 50, 100, 150, 196, 200]
 
 
 def main():
